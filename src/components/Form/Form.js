@@ -6,7 +6,7 @@ function Form(props) {
     return (
 
     <form className='form'>
-        <h3 className='form__title'>Comments</h3>
+        <h3 className='form__title'>3 Comments</h3>
         <section className='form__comment' >
 
           <section className='form__text'>
@@ -23,6 +23,7 @@ function Form(props) {
         </section>
 
         <section className='form__comments'>
+          
            {props.details.comments.map(data => {
 
             const time = data.timestamp;
