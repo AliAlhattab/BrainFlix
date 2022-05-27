@@ -12,6 +12,9 @@ class App extends Component {
   state = {
     details,
     selectedDetails:details[0],
+
+    videos,
+    selectedVideos:videos,
   };
 
   
@@ -22,7 +25,7 @@ class App extends Component {
       <Header/>
       <Info details={this.state.selectedDetails} />
       <Form details={this.state.selectedDetails} />
-      <Recommended />
+      <Recommended videos={this.state.selectedVideos}/>
 
       </div>
 

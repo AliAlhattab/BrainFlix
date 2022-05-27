@@ -4,15 +4,17 @@ import './Header.scss'
 function Header() {
     return (
 
-      <header className='header'>
+      <form className='header'>
         <img className='header__logo' src={logo} alt='BrainFlix Logo'/>
         <section className='header__input'>
           <input className='header__search' id="search" name="search" type='text' placeholder='Search'/>
           <section className='header__image'>
           </section>
         </section>
+        <section className='header__submit'>
         <button className='header__button'>UPLOAD</button>
-      </header>
+        </section>
+      </form>
   
     );
   }

@@ -1,6 +1,8 @@
 import './Form.scss'
 
 function Form(props) {
+
+
     return (
 
     <form className='form'>
@@ -22,6 +24,14 @@ function Form(props) {
 
         <section className='form__comments'>
            {props.details.comments.map(data => {
+
+            const time = data.timestamp;
+            const date = new Date(time);
+            const month = date.getMonth()+1;
+            const day = date.getDate();
+            const year = date.getFullYear();
+            let fullDate = (month + "/" + day + "/" + year)
+
             return(
               
               <section className='form__container'>
@@ -29,7 +39,7 @@ function Form(props) {
                 </section>
                 <section className='form__name-date'>
                   <p className='form__name'>{data.name}</p>
-                  <p className='form__date'>{data.timestamp}</p>
+                  <p className='form__date'>{fullDate}</p>
                 </section>
                 <section className='form__text-container'>
                   <p className='form__text'>{data.comment}</p>
