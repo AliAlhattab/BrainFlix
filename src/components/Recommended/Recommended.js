@@ -1,6 +1,6 @@
 import './Recommended.scss'
 
-function Recommended() {
+function Recommended(props) {
     return (
 
     <section className='recommended'>

@@ -1,6 +1,6 @@
 import './Form.scss'
 
-function Form() {
+function Form(props) {
     return (
 
     <form className='form'>
@@ -15,9 +15,23 @@ function Form() {
           <button className='form__button'>COMMENT</button>
         </section>
         <section className='form__comments'>
-        </section>
+           {props.details.comments.map(data => {
+            return(
+              <section className='form__info'>
+              <section className='form__name-date'>
+                <p>{data.name}</p>
+                <p>{data.timestamp}</p>
+              </section>
+              <section className='form__comment'>
+                <p>{data.comment}</p>
+              </section>
+              </section>
+            )
+          }
+        )} 
+          </section>
+        
     </form>
-    
     );
   }
   
