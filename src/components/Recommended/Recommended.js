@@ -5,15 +5,19 @@ function Recommended(props) {
 
     <section className='recommended'>
       <h2>Next Video</h2>
-      {props.videos
-      .map(data => {
-        return(
-          <section>
+      {props.videos.map((data) => {
+        return (
+          <section
+            key={data.id}
+            onClick={() => {
+              props.clickHandler(data.id);
+            }}
+          >
           <img width="400px" src={data.image} />
           <p>{data.title}</p>
           <p>{data.channel}</p>
           </section>
-        )
+        );
       }
     )}
     </section>

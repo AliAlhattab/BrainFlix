@@ -14,8 +14,16 @@ class App extends Component {
     selectedDetails:details[0],
 
     videos,
-    selectedVideos:videos,
   };
+
+  handleClick = (id) => {
+
+    let chosenVideo = this.state.details.find((video) => video.id === id)
+
+    this.setState({
+      selectedDetails: chosenVideo,
+    });
+  }
 
   
   render() {
@@ -23,9 +31,11 @@ class App extends Component {
       <div> 
       
       <Header/>
-      <Info details={this.state.selectedDetails} />
+      <Info details={this.state.selectedDetails}/>
       <Form details={this.state.selectedDetails} />
-      <Recommended videos={this.state.selectedVideos}/>
+      <Recommended videos={this.state.videos}
+      clickHandler={this.handleClick}
+      />
 
       </div>
 
