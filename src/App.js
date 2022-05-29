@@ -10,6 +10,7 @@ import details from './data/video-details.json';
 class App extends Component {
   
   state = {
+    
     details,
     selectedDetails:details[0],
 
