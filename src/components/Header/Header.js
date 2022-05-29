@@ -5,14 +5,20 @@ function Header() {
     return (
 
       <form className='header'>
-        <img className='header__logo' src={logo} alt='BrainFlix Logo'/>
-        <section className='header__input'>
-          <input className='header__search' id="search" name="search" type='text' placeholder='Search'/>
-          <section className='header__image'>
+        <article className='header__logo-container'>
+          <img className='header__logo' src={logo} alt='BrainFlix Logo'/>
+        </article>
+        <section className='header__container'>
+          <section className='header__input'>
+            <input className='header__search' id="search" name="search" type='text' placeholder='Search'/>
+            <section className='header__image'>
+            </section>
           </section>
-        </section>
-        <section className='header__submit'>
-        <button className='header__button'>UPLOAD</button>
+          <section className='header__submit'>
+          <button className='header__button'>UPLOAD</button>
+          </section>
+          <section className='header__image header__image--tablet'>
+            </section>
         </section>
       </form>
   

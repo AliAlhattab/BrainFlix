@@ -31,7 +31,7 @@ class App extends Component {
       <div> 
       
       <Header/>
-      <Info details={this.state.selectedDetails}/>
+      <Info details={this.state.selectedDetails} />
       <Form details={this.state.selectedDetails} />
       <Recommended videos={this.state.videos.filter((video) => video.id !== this.state.selectedDetails.id)}
       clickHandler={this.handleClick}

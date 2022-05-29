@@ -2,3 +2,126 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/variables' as *;
 
+
+html, body{
+    margin: 0;
+    font-family: "AvenirNext";
+}
+
+.header{
+
+    @include tablet{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0.5rem;
+        
+    }
+
+    &__logo-container{
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    &__logo{
+        width: 7.5rem;
+        height: 1.56rem;
+    }
+
+    &__container{
+
+        @include tablet{
+            display: flex;
+            height: 2.5rem;
+        }
+        
+    }
+    
+    &__input{
+        display: flex;
+        justify-content: center;
+        
+        @include tablet{
+            height: 2.5rem;
+        }
+    }
+
+    &__search{
+        border-radius: 0.25rem;
+        padding: 0.75rem 0 0.75rem 2rem;
+        width: 100%;
+        margin: 0 1rem 0 1rem;
+        background: url(../../assets/images/icons/search.svg);
+        background-repeat: no-repeat;
+        background-position: left 0.5rem center; 
+        border: 1px solid #E1E1E1;
+
+        @include tablet{
+            padding: 1rem 0 1rem 2rem;
+        }
+         
+    }
+
+    &__image{
+        background: url(../../assets/images/Mohan-muruge.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-right: 1rem;
+
+        @include tablet{
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+            display: none;
+        }
+        
+        &--tablet{
+            display: none;
+
+            @include tablet{
+            display: flex;
+            margin: 0 0 0 1.5rem
+            }
+            
+        }
+    }
+
+    &__submit{
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+        
+        @include tablet{
+            margin: 0;
+        }
+        
+        
+    }
+
+    &__button{
+        background-color: $BrainFlix-Blue;
+        height: 2.5rem;
+        border-style: none;
+        color: white;
+        border-radius: 0.25rem;
+        padding: 0 2rem 0 2rem;
+        width: 100%;
+        background-image: url(../../assets/images/icons/upload.svg);
+        background-repeat: no-repeat;
+        background-position: left 0.5rem center; 
+        &:hover{
+            background-color: $BrainFlix-DarkBlue;
+        }
+
+        @include tablet {
+            width: 9.38rem;
+        }
+    }
+    
+ 
+}
