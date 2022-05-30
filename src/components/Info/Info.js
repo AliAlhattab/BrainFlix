@@ -1,6 +1,6 @@
 import './Info.scss'
-import views from '../../assets/images/icons/views.svg'
-import likes from '../../assets/images/icons/likes.svg'
+import views from '../../assets/Images/Icons/views.svg'
+import likes from '../../assets/Images/Icons/likes.svg'
 
 function Info(props) {
     

@@ -52,7 +52,7 @@ html, body{
         padding: 0.75rem 0 0.75rem 2rem;
         width: 100%;
         margin: 0 1rem 0 1rem;
-        background: url(../../assets/images/icons/search.svg);
+        background: url(../../assets/Images/Icons/search.svg);
         background-repeat: no-repeat;
         background-position: left 0.5rem center; 
         border: 1px solid #E1E1E1;
@@ -64,7 +64,7 @@ html, body{
     }
 
     &__image{
-        background: url(../../assets/images/Mohan-muruge.jpg);
+        background: url(../../assets/Images/Mohan-muruge.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -111,7 +111,7 @@ html, body{
         border-radius: 0.25rem;
         padding: 0 2rem 0 2rem;
         width: 100%;
-        background-image: url(../../assets/images/icons/upload.svg);
+        background-image: url(../../assets/Images/Icons/upload.svg);
         background-repeat: no-repeat;
         background-position: left 0.5rem center; 
         font-size: $button-font;
