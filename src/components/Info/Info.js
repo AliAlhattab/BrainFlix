@@ -14,7 +14,6 @@ function Info(props) {
     return (
 
         <section className='info'>
-            <video className='info__video' controls poster={props.details.image} alt={props.details.title} />
             <section className='info__container'>
                 <h1 className='info__title'>{props.details.title}</h1>
                 <section className='info__details'>
