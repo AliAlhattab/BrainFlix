@@ -1,21 +1,97 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+
 .info{
+    
+    color: $BrainFlix-Black;
 
     &__video{
         width: 100%;
     }
 
+    &__container{
+        margin: $mobile-margin;
+
+        @include tablet{
+            margin: $tablet-margin;
+        }
+    }
+
     &__title{
-        font-size: 2.06rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        @include tablet{
+            margin-bottom: 1rem;
+        }
     }
 
     &__details{
         display: flex;
+        border-bottom: 1px solid $divider-color;
+        border-top: 1px solid $divider-color;
 
+        @include tablet{
+            border-top: none;
+            justify-content: space-between;
+        }
     }
 
     &__post{
-        width: 200px;
+        width: 15.63rem;
+
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            width: 13rem;
+        }
     }
 
+    &__channel{
+        font-weight: 700;
+
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+
+    &__date{
+        color: $Secondary-textColor;
+
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+
+    &__views-likes{
+        width: 15.63rem;
+
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            width: 13rem;
+        }
+    }
+
+    &__views{
+        color: $Secondary-textColor;
+        
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+
+    &__likes{
+        color: $Secondary-textColor;
+        @include tablet{
+            margin-top: 0;
+        }
+    }
+
+    &__description{
+        font-size: 0.81rem;
+        line-height: 18px;
+    }
     
 }

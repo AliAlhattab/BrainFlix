@@ -1,4 +1,6 @@
 import './Info.scss'
+import views from '../../assets/images/icons/views.svg'
+import likes from '../../assets/images/icons/likes.svg'
 
 function Info(props) {
     
@@ -13,19 +15,20 @@ function Info(props) {
 
         <section className='info'>
             <video className='info__video' controls poster={props.details.image} alt={props.details.title} />
-            <h1 className='info__title'>{props.details.title}</h1>
-            <section className='info__details'>
-                <section className='info__post'>
-                    <h3>By: {props.details.channel}</h3>
-                    <h3>{fullDate}</h3>
+            <section className='info__container'>
+                <h1 className='info__title'>{props.details.title}</h1>
+                <section className='info__details'>
+                    <section className='info__post'>
+                        <p className='info__channel'>By: {props.details.channel}</p>
+                        <p className='info__date'>{fullDate}</p>
+                    </section>
+                    <section className='info__views-likes'>
+                        <p className='info__views'> <img src={views}/> {props.details.views}</p>
+                        <p className='info__likes'> <img src={likes}/> {props.details.likes}</p>
+                    </section>
                 </section>
-                <section className='info__detail'>
-                    <h3>{props.details.views}</h3>
-                    <h3>{props.details.likes}</h3>
-                </section>
-            </section>
-            
-            <p>{props.details.description}</p>
+                <p className='info__description'>{props.details.description}</p>
+           </section>
         </section>
     
     );
