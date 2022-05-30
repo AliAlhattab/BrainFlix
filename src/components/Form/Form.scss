@@ -1,0 +1,147 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/variables' as *;
+
+.form{
+    color: $BrainFlix-Black;
+    margin: $mobile-margin;
+
+    @include tablet{
+        margin: $tablet-margin;
+    }
+
+    &__title{
+        font-weight: 700;
+    }
+
+    &__something{
+        @include tablet{
+            display: flex;
+            width: 100%;
+
+        }
+    }
+
+    &__text-container{
+        display: flex;
+        align-items: center;
+
+        @include tablet{
+            margin-bottom: 1rem;
+            
+        }
+        
+    }
+
+    &__text{
+        width: 100%;
+        margin: 0 1rem 0 1rem;
+    }
+
+    &__image{
+        background: url(../../assets/images/Mohan-muruge.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-bottom: 2.5rem;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label{
+        color: $Secondary-textColor;
+        font-size: 0.75rem;
+    }
+
+    &__input{
+        width: 100%;
+        height: 6.25rem;
+        
+        @include tablet{
+            height: initial;
+        }
+    }
+
+    &__submit{
+        display: flex;
+        justify-content: center;
+        margin: 0 0.5rem 1rem 3rem;
+
+        @include tablet {
+            margin: 0 0 0 1rem;
+            align-items: center;
+        }
+    }
+
+    &__button{
+        background-color: $BrainFlix-Blue;
+        height: 2.5rem;
+        border-style: none;
+        color: white;
+        border-radius: 0.25rem;
+        padding: 0 2rem 0 2rem;
+        width: 100%;
+        background-image: url(../../assets/images/icons/add_comment.svg);
+        background-repeat: no-repeat;
+        background-position: left 0.5rem center; 
+        font-size: $button-font;
+        &:hover{
+            background-color: $BrainFlix-DarkBlue;
+        }
+        
+        @include tablet {
+            width: 9.38rem;
+        }
+    }
+
+    &__container{
+        border-top: 1px solid $divider-color;
+        display: flex;
+    }
+
+    &__container:nth-last-child(1){
+        border-bottom: 1px solid $divider-color;
+    }
+        
+
+    &__picture{
+        background-color: $divider-color;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin: 1rem 0 0 0;
+
+    }
+
+    &__comment-info{
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    &__name-date{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name{
+        font-weight: 700;
+    }
+
+    &__date{
+        color: $Secondary-textColor;
+    }
+
+    &__comment-container{
+
+    }
+
+    &__comment{
+        margin-top: 0;
+    }
+
+}
