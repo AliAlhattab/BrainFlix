@@ -2,7 +2,6 @@ import './Recommended.scss'
 
 function Recommended(props) {
     return (
-
     <section className='recommended'>
       <h2 className='recommended__title'>NEXT VIDEOS</h2>
       {props.videos.map((data) => {

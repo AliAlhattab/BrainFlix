@@ -7,7 +7,7 @@ function Form(props) {
 
     <form className='form'>
         <p className='form__title'>3 Comments</p>
-        <section className='form__something'>
+        <section className='form__add-comment'>
           <section className='form__text-container'>
             <article className='form__image'>
             </article>

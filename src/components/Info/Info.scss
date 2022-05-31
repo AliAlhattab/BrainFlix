@@ -12,14 +12,22 @@
         @include tablet{
             margin: $tablet-margin;
         }
+
+        @include desktop{
+            margin-right: 0;
+        }
+        
     }
 
     &__title{
         font-size: 1.5rem;
         font-weight: 700;
+
         @include tablet{
             margin-bottom: 1rem;
+            font-size: 2.06rem;
         }
+
     }
 
     &__details{
@@ -30,6 +38,9 @@
         @include tablet{
             border-top: none;
             justify-content: space-between;
+        }
+        @include desktop{
+            margin-right: 0rem;
         }
     }
 
@@ -67,6 +78,10 @@
             justify-content: space-between;
             width: 13rem;
         }
+
+        @include desktop{
+            margin-right: 1rem;
+        }
     }
 
     &__views{
@@ -87,6 +102,15 @@
     &__description{
         font-size: 0.81rem;
         line-height: 18px;
+
+        @include tablet{
+            font-size: 0.88;
+            line-height: 22px;
+            padding-bottom: 2rem;
+        }
+
+        @include desktop{
+            margin-right: 1rem;
+        }
     }
-    
 }

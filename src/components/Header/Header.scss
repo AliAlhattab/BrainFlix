@@ -35,7 +35,6 @@ html, body{
             display: flex;
             height: 2.5rem;
         }
-        
     }
     
     &__input{
@@ -51,7 +50,7 @@ html, body{
         border-radius: 0.25rem;
         padding: 0.75rem 0 0.75rem 2rem;
         width: 100%;
-        margin: 0 1rem 0 1rem;
+        margin: $mobile-margin;
         background: url(../../assets/Images/Icons/search.svg);
         background-repeat: no-repeat;
         background-position: left 0.5rem center; 
@@ -59,8 +58,7 @@ html, body{
         font-size: $button-font;
         @include tablet{
             padding: 1rem 0 1rem 2rem;
-        }
-         
+        } 
     }
 
     &__image{
@@ -87,7 +85,6 @@ html, body{
             display: flex;
             margin: 0 0 0 1.5rem
             }
-            
         }
     }
 
@@ -98,9 +95,7 @@ html, body{
         
         @include tablet{
             margin: 0;
-        }
-        
-        
+        }   
     }
 
     &__button{
@@ -123,6 +118,4 @@ html, body{
             width: 9.38rem;
         }
     }
-    
- 
 }
