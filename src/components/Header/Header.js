@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/Images/Logo/BrainFlix-logo.svg'
 import './Header.scss'
 
@@ -6,7 +7,7 @@ function Header() {
 
       <form className='header'>
         <article className='header__logo-container'>
-          <img className='header__logo' src={logo} alt='BrainFlix Logo'/>
+          <NavLink to='/'> <img className='header__logo' src={logo} alt='BrainFlix Logo'/></NavLink>
         </article>
         <section className='header__container'>
           <section className='header__input'>
@@ -15,7 +16,7 @@ function Header() {
             </section>
           </section>
           <section className='header__submit'>
-          <button className='header__button'>UPLOAD</button>
+          <NavLink to="/upload"><button className='header__button'>UPLOAD</button></NavLink>
           </section>
           <section className='header__image header__image--tablet'>
             </section>
