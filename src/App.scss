@@ -1,14 +1,18 @@
 @use './styles/partials/mixins' as *;
 @use './styles/partials/variables' as *;
 
-.container{
+.app{
 
-    @include desktop{
+    &__container{
+
+         @include desktop{
         display: flex;
         padding: 0 6.5rem;
+        }
     }
+   
     
-    &-two{
+    &__info-form{
 
         @include desktop{
            border-right: 1px solid $divider-color;

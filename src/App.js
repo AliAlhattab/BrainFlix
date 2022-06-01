@@ -28,19 +28,19 @@ class App extends Component {
   
   render() {
     return (
-      <div> 
+      <section className='app'> 
         <Header/>
         <Video details={this.state.selectedDetails} />
-        <div className='container'>
-          <div className='container-two'>
+        <section className='app__container'>
+          <section className='app__info-form'>
             <Info details={this.state.selectedDetails} />
             <Form details={this.state.selectedDetails} />
-          </div>
+          </section>
           <Recommended videos={this.state.videos.filter((video) => video.id !== this.state.selectedDetails.id)}
           clickHandler={this.handleClick}
           />
-        </div>
-      </div>
+        </section>
+      </section>
 
     );
   }
