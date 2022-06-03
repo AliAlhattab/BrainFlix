@@ -23,7 +23,7 @@ function Form(props) {
         </section>
         <section className='form__comments'>
           
-           {props.details.comments.map(data => {
+           {/* {props.details.comments.map(data => {
 
             const time = data.timestamp;
             const date = new Date(time);
@@ -33,7 +33,7 @@ function Form(props) {
             let fullDate = (month + "/" + day + "/" + year)
 
             return(              
-              <section className='form__container'>
+              <section className='form__container' key={data.id}>
                 <section className='form__picture'>
                 </section>
                 <section className='form__comment-info'>
@@ -48,7 +48,7 @@ function Form(props) {
               </section>
             )
           }
-        )} 
+        )}  */}
         </section>
     </form>
 
