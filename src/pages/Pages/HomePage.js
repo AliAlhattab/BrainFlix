@@ -5,6 +5,7 @@ import Info from '../../components/Info/Info';
 import Recommended from '../../components/Recommended/Recommended';
 import Video from '../../components/Video/Video'
 import './HomePage.scss'
+import Comments from '../../components/Comments/Comments';
 
 const API_URL = "https://project-2-api.herokuapp.com";
 const API_KEY_STRING = "?api_key=123";
@@ -13,7 +14,7 @@ class HomePage extends Component {
 
     state = {
        videos: [],
-       selectedVideo: []
+       selectedVideo: {}
       };
       
       componentDidMount() {
@@ -30,7 +31,9 @@ class HomePage extends Component {
 
                     this.getSelectedVideo(videoId);
                 })
-
+                .catch(error => {
+                  console.log(error)
+                })
       }
 
       componentDidUpdate(previousProps){
@@ -41,7 +44,6 @@ class HomePage extends Component {
         if(previousVideoId !== currentVideoId) {
           this.getSelectedVideo(currentVideoId);
         }
-
       }
 
       getSelectedVideo = (videoId) => {
@@ -51,6 +53,7 @@ class HomePage extends Component {
                     this.setState({
                         selectedVideo: response.data,
                     });
+                    console.log(response.data)
                 }) 
                 .catch((error) => {
                     console.error("cant GET selectedVideo");
@@ -66,8 +69,9 @@ class HomePage extends Component {
                 <section className='home__info-form'>
                   <Info details={this.state.selectedVideo} />
                   <Form details={this.state.selectedVideo} />
+                  <Comments details={this.state.selectedVideo}/>
                 </section>
-                <Recommended videos={this.state.videos} />
+                <Recommended videos={this.state.videos.filter((video) => video.id !== this.state.selectedVideo.id)} />
               </section>
             </div>
         )   
