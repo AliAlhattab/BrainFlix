@@ -32,8 +32,7 @@ function Form(props) {
             const year = date.getFullYear();
             let fullDate = (month + "/" + day + "/" + year)
 
-            return(
-              
+            return(              
               <section className='form__container'>
                 <section className='form__picture'>
                 </section>
