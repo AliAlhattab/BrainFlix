@@ -49,11 +49,13 @@
         width: 2.25rem;
         height: 2.25rem;
         margin-bottom: 2.5rem;
+        
 
         @include tablet {
             margin-bottom: 0;
             width: 2.5rem;
             height: 2.5rem;
+            padding-right: 0.2rem;
         }
         
         @include desktop{
@@ -75,6 +77,8 @@
         border-radius: 0.25rem;
         outline: none;
         border: 1px solid #E1E1E1;
+        resize: none;
+        
         
         &:focus{
            border: 2px solid $BrainFlix-Blue;
@@ -89,7 +93,7 @@
     &__submit{
         display: flex;
         justify-content: center;
-        margin: 0 0.5rem 1rem 3rem;
+        margin: 0 0.3rem 1rem 3.2rem;
 
         @include tablet {
             margin: 0 0 0 1rem;
@@ -109,6 +113,8 @@
         background-repeat: no-repeat;
         background-position: left 0.5rem center; 
         font-size: $button-font;
+        cursor: pointer;
+
         &:hover{
             background-color: $BrainFlix-DarkBlue;
         }

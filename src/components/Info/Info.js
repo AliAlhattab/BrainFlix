@@ -6,10 +6,6 @@ function Info({ details }) {
     
     const time = details.timestamp;
     const date = new Date(time);
-    const month = date.getMonth()+1;
-    const day = date.getDate();
-    const year = date.getFullYear();
-    let fullDate = (month + "/" + day + "/" + year)
     
     return (
 
@@ -19,7 +15,7 @@ function Info({ details }) {
                 <section className='info__details'>
                     <section className='info__post'>
                         <p className='info__channel'>By: {details.channel}</p>
-                        <p className='info__date'>{fullDate}</p>
+                        <p className='info__date'>{date.toLocaleDateString()}</p>
                     </section>
                     <section className='info__views-likes'>
                         <p className='info__views'> <img src={views}/> {details.views}</p>

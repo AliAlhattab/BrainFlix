@@ -6,6 +6,13 @@
 
     color: $BrainFlix-Black;
     margin: $mobile-margin;
+
+    @include tablet{
+        margin: $tablet-margin;
+    }
+    @include desktop{
+        margin-right: 0;
+    }
     
     &__container{
         border-top: 1px solid $divider-color;
@@ -31,9 +38,11 @@
         width: 2.25rem;
         height: 2.25rem;
         margin: 1rem 0 0 0;
+        padding-right: 0.2rem;
     
         @include desktop{
             margin-right: 1.5rem;
+            
         }
     
     }
