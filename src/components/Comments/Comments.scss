@@ -3,6 +3,9 @@
 @use '../../styles/partials/variables' as *;
 
 .comments{
+
+    color: $BrainFlix-Black;
+    margin: $mobile-margin;
     
     &__container{
         border-top: 1px solid $divider-color;

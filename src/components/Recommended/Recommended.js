@@ -1,11 +1,11 @@
 import './Recommended.scss'
 import { Link } from 'react-router-dom';
 
-function Recommended(props) {
+function Recommended({ videos }) {
     return (
     <section className='recommended'>
       <h2 className='recommended__title'>NEXT VIDEOS</h2>
-      {props.videos.map((data) => {
+      {videos.map((data) => {
         return (
           <Link className='recommended__link' to={`/videos/${data.id}`} key={data.id}>
             <section className='recommended__info'>

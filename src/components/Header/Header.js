@@ -7,7 +7,7 @@ function Header() {
 
       <form className='header'>
         <article className='header__logo-container'>
-          <Link to='/'> <img className='header__logo' src={logo} alt='BrainFlix Logo'/></Link>
+          <Link className='header__logo'to='/'> <img className='header__logo' src={logo} alt='BrainFlix Logo'/></Link>
         </article>
         <section className='header__container'>
           <section className='header__input'>
@@ -16,7 +16,7 @@ function Header() {
             </section>
           </section>
           <section className='header__submit'>
-          <Link to="/upload"><button className='header__button'>UPLOAD</button></Link>
+          <Link className='header__link' to="/upload"><button className='header__button'>UPLOAD</button></Link>
           </section>
           <section className='header__image header__image--tablet'>
             </section>
