@@ -7,7 +7,7 @@ import Video from '../../components/Video/Video'
 import './HomePage.scss'
 import Comments from '../../components/Comments/Comments';
 
-const API_URL = "https://project-2-api.herokuapp.com";
+const API_URL = "http://localhost:9000";
 const API_KEY_STRING = "?api_key=123";
 
 class HomePage extends Component {
@@ -20,7 +20,7 @@ class HomePage extends Component {
       componentDidMount() {
 
           axios
-            .get(`${API_URL}/videos${API_KEY_STRING}`)
+            .get(`${API_URL}/videos`)
                 .then((response) => {
 
                     this.setState({
@@ -48,7 +48,7 @@ class HomePage extends Component {
 
       getSelectedVideo = (videoId) => {
         axios
-            .get(`${API_URL}/videos/${videoId}${API_KEY_STRING}`)
+            .get(`${API_URL}/videos/${videoId}`)
                 .then((response) => {
                     this.setState({
                         selectedVideo: response.data,
