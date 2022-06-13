@@ -10,7 +10,7 @@ function Comments({ details }) {
       const date = new Date(time);
 
       return(              
-        <section className='comments__container' key={data.id}>
+        <section className='comments__container' key={data.timestamp}>
           <article className='comments__picture'>
           </article>
           <div className='comments__comment-info'>

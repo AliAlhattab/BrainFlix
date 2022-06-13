@@ -141,13 +141,13 @@
         font-size: $button-font;
         cursor: pointer;
         
-        
         &:hover{
             background-color: $BrainFlix-DarkBlue;
         }
 
         @include tablet {
             width: 9.38rem;
+            order: 2; 
             
             
            
@@ -174,14 +174,6 @@
             width: 9.38rem;
             
         }
-    }
-
-    &__link{
-
-        @include tablet{
-            order: 2;  
-        }
-       
     }
 
 }
