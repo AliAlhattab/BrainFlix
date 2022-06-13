@@ -11,17 +11,17 @@ function Comments({ details }) {
 
       return(              
         <section className='comments__container' key={data.id}>
-          <section className='comments__picture'>
-          </section>
-          <section className='comments__comment-info'>
-            <section className='comments__name-date'>
+          <article className='comments__picture'>
+          </article>
+          <div className='comments__comment-info'>
+            <div className='comments__name-date'>
               <p className='comments__name'>{data.name}</p>
               <p className='comments__date'>{date.toLocaleDateString()}</p>
-            </section>
-            <section className='comments__comment-container'>
+            </div>
+            <div className='comments__comment-container'>
               <p className='comments__comment'>{data.comment}</p>
-            </section>
-          </section>
+            </div>
+          </div>
         </section>
       )
     }

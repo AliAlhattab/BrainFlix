@@ -18,7 +18,6 @@ class HomePage extends Component {
       };
       
       componentDidMount() {
-
           axios
             .get(`${API_URL}/videos`)
                 .then((response) => {
@@ -62,17 +61,17 @@ class HomePage extends Component {
     
     render(){
         return (
-            <div className='home'>
+            <section className='home'>
                 <Video details={this.state.selectedVideo} />
-              <section className='home__container'>
-                <section className='home__info-form'>
+              <div className='home__container'>
+                <div className='home__info-form'>
                   <Info details={this.state.selectedVideo} />
                   <Form details={this.state.selectedVideo} />
                   <Comments details={this.state.selectedVideo}/>
-                </section>
+                </div>
                 <Recommended videos={this.state.videos.filter((video) => video.id !== this.state.selectedVideo.id)} />
-              </section>
-            </div>
+              </div>
+            </section>
         )   
     }
 }

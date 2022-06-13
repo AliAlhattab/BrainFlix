@@ -10,10 +10,10 @@ function Recommended({ videos }) {
           <Link className='recommended__link' to={`/videos/${data.id}`} key={data.id}>
             <section className='recommended__info'>
               <img className='recommended__image' src={data.image} />
-              <section className='recommended__name-channel'>
+              <div className='recommended__name-channel'>
                 <p className='recommended__name'>{data.title}</p>
                 <p className='recommended__channel'>{data.channel}</p>
-              </section>
+              </div>
             </section>
           </Link>
         );

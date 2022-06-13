@@ -2,36 +2,56 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Upload.scss'
 import thumbnail from '../../assets/Images/Upload-video-preview.jpg'
+import axios from 'axios'
+import { Component } from 'react'
 
-function showAlert() {
-  alert('Your video is published')
-}
 
-function Page() {
+const API_URL = "http://localhost:9000";
 
-  return ( 
-    <form className='upload'>
-      <h1 className='upload__header'>Upload Video</h1>
-      <p className='upload__video'>VIDEO THUMBNAIL</p>
-      <div className='upload__info'>
-        <img className='upload__image' src={thumbnail} alt='Thumbnail'/>
-        <div className='upload__input'>
-          <div className='upload__title-input'>
-            <label className='upload__label'>TITLE YOUR VIDEO</label>
-            <input className='upload__title' id='title' name='title' type='text' placeholder='Add a title to your video' />
-          </div>
-          <div className='upload__description-input'>
-            <label className='upload__label'>ADD A VIDEO DESCRIPTION</label>
-            <textarea className='upload__description' id="description" name="description" type="text" placeholder='Add a description to your video' />
+
+class Upload extends Component {
+
+ addVideo = (e) => {
+  e.preventDefault()
+  axios
+    .post(`${API_URL}/videos`, {
+      // unable to get the values of title and description. you are able to post a video with no title or description or by posting through postman.
+      title: e.target.title.value,  
+      description: e.target.title.value
+    })
+    .then((response) => {
+      console.log(response);
+      alert('Your video is published')
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
+  render() {
+    return ( 
+      <form className='upload'>
+        <h1 className='upload__header'>Upload Video</h1>
+        <p className='upload__video'>VIDEO THUMBNAIL</p>
+        <div className='upload__info'>
+          <img className='upload__image' src={thumbnail} alt='Thumbnail'/>
+          <div className='upload__input'>
+            <div className='upload__title-input'>
+              <label className='upload__label'>TITLE YOUR VIDEO</label>
+              <input className='upload__title' id='title' name='title' type='text' placeholder='Add a title to your video'/>
             </div>
-          </div>
-      </div>
-      <div className='upload__submit'>
-        <Link className='upload__link' to='/'><button className='upload__publish' onClick={showAlert} >PUBLISH</button></Link>
-        <Link to='/'><button className='upload__cancel'>CANCEL</button></Link>
-      </div>
-    </form>
-  )
+            <div className='upload__description-input'>
+              <label className='upload__label'>ADD A VIDEO DESCRIPTION</label>
+              <textarea className='upload__description' id="description" name="description" type="text" placeholder='Add a description to your video'/>
+              </div>
+            </div>
+        </div>
+        <div className='upload__submit'>
+          <Link className='upload__link' to='/'><button className='upload__publish' onClick={this.addVideo}>PUBLISH</button> </Link>
+          <Link to='/'><button className='upload__cancel'>CANCEL</button></Link>
+        </div>
+      </form>
+    )
+  }
 }
-
-export default Page
+ 
+export default Upload
