@@ -16,8 +16,8 @@ class Upload extends Component {
   axios
     .post(`${API_URL}/videos`, {
       // unable to get the values of title and description. you are able to post a video with no title or description or by posting through postman.
-      title: e.target.title.value,  
-      description: e.target.title.value
+      // title: e.target.title.value,
+      // description: e.target.title.value,
     })
     .then((response) => {
       console.log(response);
