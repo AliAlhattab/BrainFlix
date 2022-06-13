@@ -34,7 +34,6 @@ class Upload extends Component {
     })
     .then((response) => {
       console.log(response);
-      alert('Your video is published')
     })
     .catch((error) => {
       console.log(error);
@@ -48,10 +47,10 @@ class Upload extends Component {
   render() {
     if(this.state.modal){
       return (
-        <div>
-          <h1>video published</h1>
-          <Link to='/'>home</Link>
-          <Link to='/uploads'>go back</Link>
+        <div className='upload__modal'>
+          <h1>Video Published!</h1>
+          <Link to='/'><button className='upload__publish'>Home</button></Link>
+          <Link to='/'><button className='upload__cancel'>Go Back</button></Link>
         </div>
       )
     }
